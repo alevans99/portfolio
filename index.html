@@ -5,11 +5,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='styles/style.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+
 </head>
 
 <body>
 
+    <!-- Contains the main layour in grid format -->
+
+    <header>
+        <nav class="navigation-section">
+            <ul class="flex-container nav-container">
+
+                <a class="nav-link nav-item" href="#about">
+                    <li class="">About</li>
+                </a>
+                <a class="nav-link nav-item" href="#portfolio">
+
+                    <li class="">Portfolio</li>
+                </a>
+                <!-- <a class="nav-link nav-item" href="#contact">
+
+                    <li class="">Contact</li> -->
+                </a>
+                <li id="dark-mode-switch" class="nav-item dark-mode-switch">
+                    <img id="dark-mode-image" class="dark-mode-image" src="images/hexagon_white.png" alt="Change dark/light mode">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="">
+
+
+
+        <section id="about">
+
+
+            <div class="about-container flex-container">
+
+
+                <!-- <h1 class="about-title flex-item about-item">Alex<br>Evans</h1> -->
+
+
+
+                <!-- <img class="about-image flex-item about-item" src="images/about_image.jpg" alt="Image of Alex"> -->
+
+
+                <p class="about-description flex-item about-item"><span class="highlighted">Hello</span>, I'm Alex.<br><br>I enjoy creating websites and apps.<br><br>These are some of my <span class="highlighted">projects</span>.</p>
+
+            </div>
+
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+
+
+
+            <div class="portfolio-container portfolio-1 grid">
+
+
+
+                <div class="portfolio-description-container grid-item">
+
+                    <h1 class="portfolio-title">Landscape Design</h1>
+
+
+                    <p class="portfolio-description">Landscape design demonstrates the use of CSS Grid and Flexbox to create a simple, adaptive website layout</p>
+
+                    <div class="portfolio-link-container flex-container">
+                        <a href="https://alevans99.github.io/landscape-design/" class="button-margin"> <button class="portfolio-1-button-1 portfolio-button">Visit</button></a>
+                        <a href="https://github.com/alevans99/landscape-design"><button class="portfolio-1-button-2 portfolio-button">View On GitHub</button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="portfolio-images-container grid-item flex-container ">
+
+
+                    <img class="portfolio-image" src="images/portfolio-1-image-1.jpg" alt="Landscape Design Preview">
+
+
+
+                </div>
+            </div>
+
+            <div class="portfolio-container portfolio-2 grid">
+
+
+                <div class="portfolio-description-container grid-item">
+
+                    <h1 class="portfolio-title">BPM Tapper</h1>
+                    <p class="portfolio-description">BPM Tapper integrates Javascript with an adaptive website design. It allows the user to use their mouse or keyboard to work out the beats per minute for a song.</p>
+
+
+                    <div class="portfolio-link-container flex-container">
+                        <a href="https://alevans99.github.io/BPM-Tapper/" class="button-margin"><button class="portfolio-2-button-1 portfolio-button">Visit</button></a>
+                        <a href="https://github.com/alevans99/BPM-Tapper"><button class="portfolio-2-button-2 portfolio-button">View On GitHub</button></a>
+
+                    </div>
+
+                </div>
+
+                <div class=" portfolio-images-container grid-item flex-container ">
+
+
+                    <img class="portfolio-image portfolio-2-image" src="images/portfolio-2-image-1.png " alt="Landscape Design Preview ">
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="contact" class="contact ">
+            <div></div>
+
+
+        </section> -->
+
+
+
+
+    </main>
+
+
+
+
 </body>
+<script src="scripts/js.js"></script>
 
 </html>
