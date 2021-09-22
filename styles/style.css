@@ -148,7 +148,7 @@ ul {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: left;
-    color: var(--highlight-color);
+    color: var(--main-font-color);
 }
 
 .portfolio-description {
@@ -202,7 +202,7 @@ ul {
 .portfolio-image {
     width: 50%;
     border-radius: 2%;
-    border: 2px var(--highlight-color) solid;
+    border: 2px var(--button-hover-text-color) solid;
 }
 
 @media only screen and (max-width: 740px) {
