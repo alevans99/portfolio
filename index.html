@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='styles/style.css' rel='stylesheet'>
+    <link href='styles/index.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,22 +17,20 @@
 
 <body>
 
-    <!-- Contains the main layour in grid format -->
+    <!-- Contains the main layout in grid format -->
 
-    <header>
+    <header id="index-top">
         <nav class="navigation-section">
             <ul class="flex-container nav-container">
 
-                <a class="nav-link nav-item" href="#about">
+                <a class="nav-link nav-item" href="about.html">
                     <li class="">About</li>
                 </a>
-                <a class="nav-link nav-item" href="#portfolio">
+                <a class="nav-link nav-item" href="projects.html">
 
                     <li class="">Portfolio</li>
                 </a>
-                <!-- <a class="nav-link nav-item" href="#contact">
 
-                    <li class="">Contact</li> -->
                 </a>
                 <li id="dark-mode-switch" class="nav-item dark-mode-switch">
                     <img id="dark-mode-image" class="dark-mode-image" src="images/hexagon_white.png" alt="Change dark/light mode">
@@ -41,17 +39,17 @@
         </nav>
     </header>
 
-    <main class="">
+    <main class="main-content">
 
 
 
         <section id="about">
 
 
-            <div class="about-container flex-container">
+            <div class="about-container">
 
 
-                <p class="about-description flex-item about-item"><span class="highlighted">Hello</span>, I'm Alex.<br><br>I enjoy creating websites and apps.<br><br>These are some of my <span class="highlighted">projects</span>.</p>
+                <p class="about-description about-item"><span class="highlighted">Hello</span>, I'm Alex.<br><br>I enjoy creating websites and apps.<br><br>These are some of my <a href="projects.html"><span class="highlighted">projects</span></a>.</p>
 
             </div>
 
@@ -60,69 +58,41 @@
         <section id="portfolio" class="portfolio-section">
 
 
-
-            <div class="portfolio-container portfolio-1 grid">
-
-
-
-                <div class="portfolio-description-container grid-item">
-
-                    <h1 class="portfolio-title">Landscape Design</h1>
-
-
-                    <p class="portfolio-description">Landscape design demonstrates the use of CSS Grid and Flexbox to create a simple, adaptive website layout</p>
-
-                    <div class="portfolio-link-container flex-container">
-                        <a href="https://alevans99.github.io/landscape-design/" class="button-margin"> <button class="portfolio-1-button-1 portfolio-button">Visit</button></a>
-                        <a href="https://github.com/alevans99/landscape-design"><button class="portfolio-1-button-2 portfolio-button">View On GitHub</button></a>
-
-                    </div>
-
-                </div>
-
-                <div class="portfolio-images-container grid-item flex-container ">
-
-
-                    <img class="portfolio-image" src="images/portfolio-1-image-1.jpg" alt="Landscape Design Preview">
+            <a href="projects.html#nc-news"><div class="portfolio-preview-container nc-preview">
+               <div class="portfolio-preview-overlay hidden">
+                <p class="project-preview-description">NC News is a social news aggregation, rating, and discussion website.</p>
+                   <div class="tech-stack-container">
+                    <img class="tech-stack-icon" src="images/nodejs.svg" alt="express JS">
+                    <img class="tech-stack-icon" src="images/expressjs.png" alt="express JS">
+                    <img class="tech-stack-icon" src="images/postgresql.svg" alt="express JS">
+                    <img class="tech-stack-icon" src="images/react.svg" alt="express JS">
+                    <img class="tech-stack-icon" src="images/jest.jpeg" alt="express JS">
+                   </div>
+   
 
 
 
+               </div>
+            </div>
+        </a>
+            <a href="projects.html#beatdrop"><div class="portfolio-preview-container bd-preview">
+                <div class="portfolio-preview-overlay hidden">
+                    
+                    <p class="project-preview-description">BeatDrop is a vertical scrolling video game with integrated social features.</p>
+
+                    <div class="tech-stack-container">
+                    <img class="tech-stack-icon" src="images/nodejs.svg" alt="express JS">
+                    <img class="tech-stack-icon" src="images/firebase.svg" alt="express JS">
+                    <img class="tech-stack-icon" src="images/phaser.png" alt="express JS">
+                    <img class="tech-stack-icon" src="images/react.svg" alt="express JS">
                 </div>
             </div>
 
-            <div class="portfolio-container portfolio-2 grid">
-
-
-                <div class="portfolio-description-container grid-item">
-
-                    <h1 class="portfolio-title">BPM Tapper</h1>
-                    <p class="portfolio-description">BPM Tapper integrates Javascript with an adaptive website design. It allows the user to use their mouse or keyboard to work out the beats per minute for a song.</p>
-
-
-                    <div class="portfolio-link-container flex-container">
-                        <a href="https://alevans99.github.io/BPM-Tapper/" class="button-margin"><button class="portfolio-2-button-1 portfolio-button">Visit</button></a>
-                        <a href="https://github.com/alevans99/BPM-Tapper"><button class="portfolio-2-button-2 portfolio-button">View On GitHub</button></a>
-
-                    </div>
-
-                </div>
-
-                <div class=" portfolio-images-container grid-item flex-container ">
-
-
-                    <img class="portfolio-image portfolio-2-image" src="images/portfolio-2-image-1.png " alt="Landscape Design Preview ">
-
-
-
-                </div>
             </div>
+        </a>
+
+      
         </section>
-
-        <!-- <section id="contact" class="contact ">
-            <div></div>
-
-
-        </section> -->
 
 
 
@@ -133,6 +103,6 @@
 
 
 </body>
-<script src="scripts/js.js"></script>
+<script src="scripts/index.js"></script>
 
 </html>
