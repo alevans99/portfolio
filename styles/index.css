@@ -16,6 +16,9 @@ html {
   --button-hover-background-color: #ffa900;
   --button-border-color: #ffa900;
   --button-hover-border-color: #ffa900;
+  /* --nc-news-background: #2b041080;
+  --beatdrop-background: #3a15027e;
+  --worth-starting-background: #85405582; */
 }
 
 body {
@@ -150,12 +153,15 @@ ul {
 .bd-preview {
   background-image: url('../images/beatdrop-image.jpg');
 }
+.ws-preview {
+  background-image: url('../images/worth-starting-preview.jpg');
+}
 
 .portfolio-preview-overlay {
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.825);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 2%;
   flex-wrap: nowrap;
   flex-direction: column;

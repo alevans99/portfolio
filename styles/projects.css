@@ -1,5 +1,10 @@
 .portfolio-section {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body {
+  margin: 0;
 }
 .portfolio-container {
   display: flex;
@@ -8,6 +13,18 @@
   padding-top: 50px;
 }
 
+#nc-news {
+  /* background-color: var(--nc-news-background); */
+  padding: 5%;
+}
+#beatdrop {
+  /* background-color: var(--beatdrop-background); */
+  padding: 5%;
+}
+#worth-starting {
+  /* background-color: var(--worth-starting-background); */
+  padding: 5%;
+}
 .project-title-container {
   display: flex;
   flex-wrap: wrap;
@@ -30,12 +47,17 @@
 }
 
 .project-title {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+.project-subtitle {
+  font-size: 2rem;
   margin-top: 0;
 }
 .project-description-text {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 

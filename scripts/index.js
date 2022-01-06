@@ -12,6 +12,11 @@ function switchViewMode() {
     root.style.setProperty('--button-hover-background-color', '#fff');
     root.style.setProperty('--button-hover-border-color', '#FA4950');
     root.style.setProperty('--button-hover-text-color', '#000');
+
+    // root.style.setProperty('--nc-news-background', '#b4f6f4');
+    // root.style.setProperty('--beatdrop-background', '#d068bb7e');
+    // root.style.setProperty('--worth-starting-background', '#b7ceceb8');
+
     document.getElementById('dark-mode-image').src = 'images/hexagon_black.png';
 
     document.querySelectorAll('.github-image').forEach((element) => {
@@ -26,6 +31,11 @@ function switchViewMode() {
     root.style.setProperty('--button-hover-background-color', '#FFA900');
     root.style.setProperty('--button-hover-border-color', '#FFA900');
     root.style.setProperty('--button-hover-text-color', '#fff');
+
+    // root.style.setProperty('--nc-news-background', '#2b041080');
+    // root.style.setProperty('--beatdrop-background', '#3a15027e');
+    // root.style.setProperty('--worth-starting-background', '#1c0f1382');
+
     document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
     document.querySelectorAll('.github-image').forEach((element) => {
       element.src = 'images/github-light.png';
