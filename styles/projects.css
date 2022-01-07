@@ -3,9 +3,6 @@
   margin: 0;
 }
 
-body {
-  margin: 0;
-}
 .portfolio-container {
   display: flex;
   flex-direction: column;
@@ -109,5 +106,28 @@ body {
   .project-image {
     height: 180px;
     margin-bottom: 30px;
+  }
+  .project-title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .project-subtitle {
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+  .portfolio-section {
+    text-align: center;
+  }
+
+  .link-image {
+    height: 100px;
+  }
+  .project-link-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description-text {
+    font-size: 1.2rem;
   }
 }
