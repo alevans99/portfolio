@@ -77,6 +77,12 @@
 
 .project-link-title {
   font-size: 2rem;
+  margin-bottom: 0;
+  color: var(--main-font-color);
+}
+
+.project-link .project-image:hover {
+  border: 1px var(--highlight-color) solid;
 }
 
 @media only screen and (max-width: 1260px) {

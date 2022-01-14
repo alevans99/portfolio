@@ -10,6 +10,8 @@ html {
   --main-font-color: #fff;
   --main-background-color: #000;
   --highlight-color: #ffa900;
+  --highlight-hover-color: #ffe2a9;
+
   --button-background-color: #000;
   --button-text-color: #fff;
   --button-hover-text-color: #fff;
@@ -90,6 +92,9 @@ ul {
 .highlighted {
   color: var(--highlight-color);
 }
+a .highlighted:hover {
+  color: var(--highlight-hover-color);
+}
 
 .about-container {
   margin: 4%;
@@ -121,7 +126,7 @@ ul {
   text-align: left;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--main-font-color);
   margin: 0;
 }

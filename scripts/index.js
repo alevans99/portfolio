@@ -7,6 +7,8 @@ function switchViewMode() {
     root.style.setProperty('--main-background-color', '#fff');
     root.style.setProperty('--main-font-color', '#000');
     root.style.setProperty('--highlight-color', '#FA4950');
+    root.style.setProperty('--highlight-hover-color', '#570005');
+
     root.style.setProperty('--button-background-color', '#FA4950');
     root.style.setProperty('--button-border-color', '#FA4950');
     root.style.setProperty('--button-hover-background-color', '#fff');
@@ -26,6 +28,7 @@ function switchViewMode() {
     root.style.setProperty('--main-background-color', '#000');
     root.style.setProperty('--main-font-color', '#fff');
     root.style.setProperty('--highlight-color', '#FFA900');
+    root.style.setProperty('--highlight-hover-color', '#ffe2a9');
     root.style.setProperty('--button-background-color', '#000');
     root.style.setProperty('--button-border-color', '#FFA900');
     root.style.setProperty('--button-hover-background-color', '#FFA900');
