@@ -159,6 +159,9 @@ a .highlighted:hover {
 .ws-preview {
   background-image: url('../images/worth-starting-preview.jpg');
 }
+.vtd-preview {
+  background-image: url('../images/vue-to-do-image.png');
+}
 
 .portfolio-preview-overlay {
   height: 100%;
