@@ -147,6 +147,18 @@ a .highlighted:hover {
   margin-bottom: 10%;
 }
 
+.portfolio-preview-container-mobile {
+  width: 500px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2%;
+  margin: 20px;
+  border: 1px #000 solid;
+  margin-bottom: 10%;
+}
+
 .nc-preview {
   background-image: url('../images/nc-news-1.jpg');
 }
@@ -174,6 +186,26 @@ a .highlighted:hover {
   opacity: 1;
   transition: visibility 0.2s, opacity 0.2s linear;
   cursor: pointer;
+}
+
+.portfolio-preview-overlay-mobile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.portfolio-preview-overlay-mobile.nc-mobile,
+.portfolio-preview-overlay-mobile.bd-mobile,
+.portfolio-preview-overlay-mobile.ws-mobile,
+.portfolio-preview-overlay-mobile.vtd-mobile {
+  background-color: rgb(255, 255, 255);
 }
 
 .hidden {
@@ -210,6 +242,11 @@ a .highlighted:hover {
 
 .project-preview-sub-container {
   display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.project-preview-links-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -240,8 +277,22 @@ a .highlighted:hover {
   box-shadow: 0 0 10px 4px var(--highlight-hover-color);
 }
 
+.only-mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1230px) {
+  .only-mobile {
+    display: none;
+  }
+
   .portfolio-preview-container {
+    width: 400px;
+    height: 240px;
+  }
+
+  .portfolio-preview-container-mobile {
+    display: none;
     width: 400px;
     height: 240px;
   }
@@ -260,7 +311,17 @@ a .highlighted:hover {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .only-mobile {
+    display: none;
+  }
+
   .portfolio-preview-container {
+    width: 300px;
+    height: 180px;
+  }
+
+  .portfolio-preview-container-mobile {
+    display: none;
     width: 300px;
     height: 180px;
   }
@@ -285,8 +346,40 @@ a .highlighted:hover {
 }
 
 @media only screen and (max-width: 640px) {
+  .only-mobile {
+    display: block;
+  }
+
   .nav-item {
     font-size: 1.2rem;
+  }
+
+  .portfolio-preview-container {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  .portfolio-preview-container-mobile {
+    margin-top: 0;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .portfolio-preview-overlay {
+    display: none;
+  }
+
+  .portfolio-preview-overlay-mobile {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .project-preview-sub-container {
+    gap: 20px;
   }
 
   .portfolio-description {
