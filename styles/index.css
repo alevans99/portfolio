@@ -208,6 +208,38 @@ a .highlighted:hover {
   padding: 4px;
 }
 
+.project-preview-sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.link-container a {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: var(--main-font-color);
+}
+
+.link-container img:hover {
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px var(--highlight-hover-color);
+}
+
 @media only screen and (max-width: 1230px) {
   .portfolio-preview-container {
     width: 400px;
@@ -216,6 +248,15 @@ a .highlighted:hover {
 
   .project-preview-description {
     font-size: 1.5rem;
+  }
+
+  .link-container a {
+    font-size: 1.2em;
+  }
+
+  .link-container img {
+    width: 80px;
+    height: 80px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -231,6 +272,15 @@ a .highlighted:hover {
   .portfolio-description {
     font-size: 1.6rem;
     text-align: center;
+  }
+
+  .link-container a {
+    font-size: 1.1em;
+  }
+
+  .link-container img {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -248,5 +298,14 @@ a .highlighted:hover {
   .portfolio-description {
     font-size: 1.4rem;
     text-align: center;
+  }
+
+  .link-container a {
+    font-size: 1em;
+  }
+
+  .link-container img {
+    width: 60px;
+    height: 60px;
   }
 }
