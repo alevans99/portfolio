@@ -1,7 +1,6 @@
 //Allows us to access CSS variables
 let root = document.documentElement;
 let darkmode = true;
-
 function switchViewMode() {
   if (darkmode) {
     root.style.setProperty('--main-background-color', '#fff');
@@ -20,6 +19,12 @@ function switchViewMode() {
     // root.style.setProperty('--worth-starting-background', '#b7ceceb8');
 
     document.getElementById('dark-mode-image').src = 'images/hexagon_black.png';
+    document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
+      document.getElementById('dark-mode-image').src = 'images/hexagon_red.png';
+    });
+    document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
+      document.getElementById('dark-mode-image').src = 'images/hexagon_black.png';
+    });
 
     document.querySelectorAll('.github-image').forEach((element) => {
       element.src = 'images/github-dark.png';
@@ -40,6 +45,13 @@ function switchViewMode() {
     // root.style.setProperty('--worth-starting-background', '#1c0f1382');
 
     document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
+    document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
+      document.getElementById('dark-mode-image').src = 'images/hexagon_yellow.png';
+    });
+    document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
+      document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
+    });
+
     document.querySelectorAll('.github-image').forEach((element) => {
       element.src = 'images/github-light.png';
     });
@@ -49,6 +61,12 @@ function switchViewMode() {
 
 document.getElementById('dark-mode-switch').addEventListener('click', (e) => {
   switchViewMode();
+});
+document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
+  document.getElementById('dark-mode-image').src = 'images/hexagon_yellow.png';
+});
+document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
+  document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
 });
 
 document.querySelectorAll('.portfolio-preview-container').forEach((element) => {

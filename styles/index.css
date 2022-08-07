@@ -68,6 +68,9 @@ ul {
   cursor: pointer;
   font-size: 2rem;
 }
+.nav-item:hover {
+  color: var(--highlight-color);
+}
 
 .nav-container {
   align-items: center;
@@ -96,10 +99,6 @@ a .highlighted:hover {
   color: var(--highlight-hover-color);
 }
 
-.about-container {
-  margin: 4%;
-}
-
 .grid-item {
   /* border: 2px yellowgreen solid; */
 }
@@ -121,16 +120,14 @@ a .highlighted:hover {
   margin-right: 30px;
 }
 
-.about-description,
-.portfolio-description {
-  text-align: left;
+.about-description {
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 2.5em;
   color: var(--main-font-color);
-  margin: 0;
+  margin-top: 20px;
 }
-
 .portfolio-section {
   margin: 4%;
   display: flex;
@@ -229,9 +226,15 @@ a .highlighted:hover {
   .project-preview-description {
     font-size: 1rem;
   }
+
+  .about-description,
+  .portfolio-description {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 640px) {
   .nav-item {
     font-size: 1.2rem;
   }
