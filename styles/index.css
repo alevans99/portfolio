@@ -171,7 +171,9 @@ a .highlighted:hover {
 .vtd-preview {
   background-image: url('../images/vue-to-do-image.png');
 }
-
+.cs-preview {
+  background-image: url('../images/chat-space-image.png');
+}
 .portfolio-preview-overlay {
   height: 100%;
   width: 100%;
