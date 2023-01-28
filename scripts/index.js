@@ -1,73 +1,67 @@
 //Allows us to access CSS variables
 let root = document.documentElement;
-let darkmode = true;
-function switchViewMode() {
-  if (darkmode) {
-    root.style.setProperty('--main-background-color', '#fff');
-    root.style.setProperty('--main-font-color', '#000');
-    root.style.setProperty('--highlight-color', '#FA4950');
-    root.style.setProperty('--highlight-hover-color', '#570005');
+const sessionMode = JSON.parse(sessionStorage.getItem('darkMode'))
+let darkmode = sessionMode !== null ? sessionMode : true
+const hexSwitch = document.getElementById(`dark-mode-switch`)
+const hexImage = document.getElementById('dark-mode-image')
+const gitHubImages = document.querySelectorAll('.github-image')
 
-    root.style.setProperty('--button-background-color', '#FA4950');
-    root.style.setProperty('--button-border-color', '#FA4950');
-    root.style.setProperty('--button-hover-background-color', '#fff');
-    root.style.setProperty('--button-hover-border-color', '#FA4950');
-    root.style.setProperty('--button-hover-text-color', '#000');
-
-    // root.style.setProperty('--nc-news-background', '#b4f6f4');
-    // root.style.setProperty('--beatdrop-background', '#d068bb7e');
-    // root.style.setProperty('--worth-starting-background', '#b7ceceb8');
-
-    document.getElementById('dark-mode-image').src = 'images/hexagon_black.png';
-    document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
-      document.getElementById('dark-mode-image').src = 'images/hexagon_red.png';
-    });
-    document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
-      document.getElementById('dark-mode-image').src = 'images/hexagon_black.png';
-    });
-
-    document.querySelectorAll('.github-image').forEach((element) => {
-      element.src = 'images/github-dark.png';
-    });
-  } else {
-    root.style.setProperty('--main-background-color', '#000');
-    root.style.setProperty('--main-font-color', '#fff');
-    root.style.setProperty('--highlight-color', '#FFA900');
-    root.style.setProperty('--highlight-hover-color', '#ffe2a9');
-    root.style.setProperty('--button-background-color', '#000');
-    root.style.setProperty('--button-border-color', '#FFA900');
-    root.style.setProperty('--button-hover-background-color', '#FFA900');
-    root.style.setProperty('--button-hover-border-color', '#FFA900');
-    root.style.setProperty('--button-hover-text-color', '#fff');
-
-    // root.style.setProperty('--nc-news-background', '#2b041080');
-    // root.style.setProperty('--beatdrop-background', '#3a15027e');
-    // root.style.setProperty('--worth-starting-background', '#1c0f1382');
-
-    document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
-    document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
-      document.getElementById('dark-mode-image').src = 'images/hexagon_yellow.png';
-    });
-    document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
-      document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
-    });
-
-    document.querySelectorAll('.github-image').forEach((element) => {
-      element.src = 'images/github-light.png';
-    });
-  }
-  darkmode = !darkmode;
+const schemeColors = {
+  black: '#fff',
+  white: '#000',
+  gold: '#FA4950',
+  lightGold: '#570005',
+  red: '#FFA900',
+  lightRed: 'ffe2a9',
 }
 
-document.getElementById('dark-mode-switch').addEventListener('click', (e) => {
-  switchViewMode();
+const cssVarColors = [
+  { cssVarName: '--main-background-color', lightValue: 'black', darkValue: 'white' },
+  { cssVarName: '--main-font-color', lightValue: 'white', darkValue: 'black' },
+  { cssVarName: '--highlight-color', lightValue: 'gold', darkValue: 'red' },
+  { cssVarName: '--highlight-hover-color', lightValue: 'lightGold', darkValue: 'lightRed' },
+  { cssVarName: '--button-background-color', lightValue: 'gold', darkValue: 'white' },
+  { cssVarName: '--button-border-color', lightValue: 'gold', darkValue: 'red' },
+  { cssVarName: '--button-hover-background-color', lightValue: 'white', darkValue: 'red' },
+  { cssVarName: '--button-hover-border-color', lightValue: 'gold', darkValue: 'red' },
+  { cssVarName: '--button-hover-text-color', lightValue: 'white', darkValue: 'black' },
+]
+
+const changeImagesTo = (newMode) => {
+  const imageColorToUse = newMode === 'dark' ? 'white' : 'black'
+  const imageHoverToUse = newMode === 'dark' ? 'yellow' : 'red'
+  const gitHubImageToUse = newMode === 'dark' ? 'light' : 'dark'
+
+  hexImage.src = `images/hexagon_${imageColorToUse}.png`
+  hexSwitch.addEventListener('mouseenter', (e) => {
+    hexImage.src = `images/hexagon_${imageHoverToUse}.png`;
+  });
+
+  hexSwitch.addEventListener('mouseleave', (e) => {
+    hexImage.src = `images/hexagon_${imageColorToUse}.png`;
+  });
+
+  gitHubImages.forEach((element) => {
+    element.src = `images/github-${gitHubImageToUse}.png`;
+  });
+}
+
+
+function switchViewModeTo(mode) {
+  cssVarColors.forEach((cssVar) => {
+    root.style.setProperty(cssVar.cssVarName, schemeColors[cssVar[`${mode}Value`]])
+  })
+  changeImagesTo(mode)
+}
+
+hexSwitch.addEventListener('click', (e) => {
+  switchViewModeTo(darkmode ? 'light' : 'dark');
+  darkmode = !darkmode
+  sessionStorage.setItem('darkMode', darkmode)
 });
-document.getElementById('dark-mode-switch').addEventListener('mouseenter', (e) => {
-  document.getElementById('dark-mode-image').src = 'images/hexagon_yellow.png';
-});
-document.getElementById('dark-mode-switch').addEventListener('mouseleave', (e) => {
-  document.getElementById('dark-mode-image').src = 'images/hexagon_white.png';
-});
+
+//First load, set darkmode to default/previously set
+switchViewModeTo(darkmode ? 'dark' : 'light')
 
 document.querySelectorAll('.portfolio-preview-container').forEach((element) => {
   element.addEventListener('mouseover', (e) => {
